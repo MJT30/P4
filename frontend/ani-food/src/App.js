@@ -1,9 +1,10 @@
 import "./App.css";
 import Fetch from "./components/Fetch";
+import Header from "./components/Header";
 function App() {
   return (
     <div className="App">
-      <h1>Ani-Food</h1>
+      <Header />
       <Fetch />
     </div>
   );
