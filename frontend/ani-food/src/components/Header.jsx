@@ -3,7 +3,9 @@ import "./header.css";
 const Header = () => {
   return (
     <div>
-      <h3 className="name">Ani-Food</h3>
+      <h3 className="name">Ani-Food</h3> 
+      <button>New Post</button>
+
     </div>
   );
 };
