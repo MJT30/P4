@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet"  type="text/css" href="style.css"/>
+    <title>Ani-Food</title>
+</head>
+<header><h1> <p class="ani_food">Add a new recipe!</p></h1></header>
+<body>
+    <form action="/home" method="POST">
+        <div class="post_form">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" class="input_form"/>
+
+            <label for="anime">Anime Title:</label>
+            <input id="anime" type="text" name="anime" class="input_form"/>
+
+            <label for="dish">Dish:</label>
+            <input id="dish" type="text" name="dish" class="input_form"/>
+
+            <label for="img">Anime Image:</label>
+            <input id="img" type="text" name="anime_image" class="input_form"/>
+
+            <label for="img">Rl Image:</label>
+            <input id="img" type="text" name="rl_image" class="input_form"/>
+
+            <label for="recipe">Recipe:</label>
+            <input id="recipe" type="text" name="recipe" class="input_form"/>
+        </div>
+        <input type="submit" class="submit_button"/>
+        <a href="/home" class="cancel_button">Never mind</a>
+    
+    </form>
+</body>
+</html>
