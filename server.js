@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const fileUpload = require("express-fileupload");
+const path = require("path");
 const aniFoodSeed = require("./db/seed.json");
 require("hbs");
 const AniFood = require("./models/seed");
@@ -9,8 +11,13 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "hbs");
-
 app.use(methodOverride("_method"));
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+app.get("/", (req, res) => {
+  res.render(path.join(__dirname, "anifood/newrecipe"));
+});
 
 //Landing page.
 app.get("/home", (req, res) => {
@@ -40,6 +47,14 @@ app.post("/home", (req, res) => {
   AniFood.create(req.body);
   res.redirect("/home");
   console.log("Adding new recipe");
+});
+
+//Upload route
+app.post("/upload", fileUpload({ createParentPath: true }), (req, res) => {
+  const files = req.files;
+  console.log(files);
+
+  return res.json({ status: "in there", message: "also in there" });
 });
 
 // app.get("/api", (req, res) => {
