@@ -20,6 +20,10 @@
             <label for="dish">Dish:</label>
             <input id="dish" type="text" name="dish" class="input_form"/>
 
+
+            <label for="recipe">Recipe:</label>
+            <input id="recipe" type="text" name="recipe" class="input_form"/>
+
             {{!-- <label for="img">Anime Image:</label>
             <input id="img" type="text" name="anime_image" class="input_form"/>
 
@@ -29,14 +33,16 @@
         <form id="uploadForm" enctype="multipart/form-data">
 
             <label for="img">Anime Image:</label>
-            <input id="myFiles" accept="image/*" multiple type="file" name="anime_image" class="input_form"/>
+            <input id="myfiles" accept="image/*" multiple type="file" name="anime_image" class="input_form"/>
 
             <label for="img">Rl Image:</label>
-            <input id="myFiles" accept="image/*" multiple type="file" name="rl_image" class="input_form"/>
+            <input id="myfiles" accept="image/*" multiple type="file" name="rl_image" class="input_form"/>
             <button>Submit</button>
         </form>
-        <h2></h2>
-        <h3></h3>
+        <br/>
+        <br/>
+        {{!-- <h2></h2>
+        <h3></h3> --}}
         <script>
             const form = document.getElementById('uploadForm')
             
@@ -50,7 +56,7 @@
                     formData.append(myFiles.item(key).name, myFiles.item(key))
                 })
 
-                const response = await fetch('http://localhost:4000/upload', {
+                const response = await fetch('http://localhost:4000/home', {
                     method: 'POST',
                     body: formData
                 })
@@ -76,11 +82,10 @@
 
 
 
-            <label for="recipe">Recipe:</label>
-            <input id="recipe" type="text" name="recipe" class="input_form"/>
+            
         </div>
-        <input type="submit" class="submit_button"/>
-        <a href="/home" class="cancel_button">Never mind</a>
+        {{!-- <input type="submit" class="submit_button"/> --}}
+        <a href="/home" class="cancel_button">&#8592;</a>
     
     </form>
 </body>

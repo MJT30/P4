@@ -2,6 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
 const path = require("path");
+
+const mid = require("./middleware/mid");
+const sizeLimit = require("./middleware/sizeLimit");
+const extentionLimit = require("./middleware/extentionLimit");
+
 const aniFoodSeed = require("./db/seed.json");
 require("hbs");
 const AniFood = require("./models/seed");
@@ -14,10 +19,6 @@ app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-
-app.get("/", (req, res) => {
-  res.render(path.join(__dirname, "anifood/newrecipe"));
-});
 
 //Landing page.
 app.get("/home", (req, res) => {
@@ -42,20 +43,38 @@ app.get("/home/:id/", (req, res) => {
 });
 
 //Post's new recipe to homepage.
+// app.post("/home", (req, res) => {
+//   console.log(req.body);
+//   AniFood.create(req.body);
+//   res.redirect("/home");
+//   console.log("Adding new recipe");
+// });
+
+//Upload route
 app.post("/home", (req, res) => {
   console.log(req.body);
   AniFood.create(req.body);
   res.redirect("/home");
   console.log("Adding new recipe");
 });
+fileUpload({ createParentPath: true }),
+  mid,
+  extentionLimit([".png", ".jpg", ".jpeg"]),
+  sizeLimit,
+  (req, res) => {
+    const files = req.files;
+    console.log(files);
+    Object.keys(files).forEach((key) => {
+      const filePath = path.join(__dirname, "files", files[key].name);
+      files[key].mv(filePath),
+        (err) => {
+          if (err)
+            return res.status(500).json({ status: "error", message: err });
+        };
+    });
 
-//Upload route
-app.post("/upload", fileUpload({ createParentPath: true }), (req, res) => {
-  const files = req.files;
-  console.log(files);
-
-  return res.json({ status: "in there", message: "also in there" });
-});
+    return res.json({ status: "in there", message: "also in there" });
+  };
 
 // app.get("/api", (req, res) => {
 //   //<------ Shows the api data as JSON, won't be accessible my user ------>//
@@ -67,4 +86,4 @@ app.post("/upload", fileUpload({ createParentPath: true }), (req, res) => {
 //   res.redirect("/api");
 // });
 
-app.listen(4000, () => console.log("Server is up and running"));
+app.listen(4000, () => console.log("Server is up and running")); //<===== Change this
