@@ -24,26 +24,26 @@
             <label for="recipe">Recipe:</label>
             <input id="recipe" type="text" name="recipe" class="input_form"/>
 
-            {{!-- <label for="img">Anime Image:</label>
+            <label for="img">Anime Image:</label>
             <input id="img" type="text" name="anime_image" class="input_form"/>
 
             <label for="img">Rl Image:</label>
-            <input id="img" type="text" name="rl_image" class="input_form"/> --}}
+            <input id="img" type="text" name="rl_image" class="input_form"/>
 
-        <form id="uploadForm" enctype="multipart/form-data">
+        {{!-- <form id="uploadForm" enctype="multipart/form-data">
 
             <label for="img">Anime Image:</label>
             <input id="myfiles" accept="image/*" multiple type="file" name="anime_image" class="input_form"/>
 
             <label for="img">Rl Image:</label>
-            <input id="myfiles" accept="image/*" multiple type="file" name="rl_image" class="input_form"/>
-            <button>Submit</button>
+            <input id="myfiles" accept="image/*" multiple type="file" name="rl_image" class="input_form"/> --}}
+            {{!-- <button>Submit</button>
         </form>
         <br/>
-        <br/>
+        <br/> --}}
         {{!-- <h2></h2>
         <h3></h3> --}}
-        <script>
+        {{!-- <script>
             const form = document.getElementById('uploadForm')
             
 
@@ -77,14 +77,15 @@
                 e.preventDefault()
                 sendFiles()
             })
-        </script>
+        </script> --}}
 
 
 
 
             
         </div>
-        {{!-- <input type="submit" class="submit_button"/> --}}
+        <input type="submit" class="submit_button"/>
+        <br/>
         <a href="/home" class="cancel_button">&#8592;</a>
     
     </form>

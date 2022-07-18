@@ -10,7 +10,7 @@ input[type=text] {
   }
 
 
-button{
+  .submit_button{
     display: inline-block;
   padding: 2px 25px;
   font-size: 24px;
@@ -34,9 +34,10 @@ button:active {
   }
 
 .image{
-    max-width: 30%;
-    max-height: 30%;
+    max-width: 50%;
+    max-height: 50%;
     align-items: center;
+    display: flexbox;
 }
 .title{
     border-style: solid;

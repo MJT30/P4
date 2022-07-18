@@ -6,8 +6,25 @@
    <link rel="stylesheet"  type="text/css" href="style.css"/>
     <title>Ani-Food</title>
 </head>
-<header><h1> <p class="ani_food">Ani-Food[WIP]</p></h1></header>
-<a href="/newrecipe" class="post">New Recipe</a>
+<header><h1> <p class="ani_food">Ani-Food[WIP]</p></h1>
+{{!-- <input type="text" id="search" onkeyup="sendData(this)"/>
+<section id="results"></section>
+
+<script>
+ function sendData(e){
+    fetch('http://localhost:4000/home', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({payload: e.value})
+    }).then(res => res.json()).then(data => {ß
+        let payload = data.payload;
+        console.log(payload)
+    })
+ }
+
+</script> --}}
+</header>
+<a href="/newrecipe" class="submit_button">New Recipe</a>
 
 <div class="content">
     {{#each data}}
@@ -17,7 +34,7 @@
     <img alt="..." class="image" src="{{this.anime_image}}" />  <img alt="..." class="image" src="{{this.rl_image}}" /> 
     <br/>
     <h4 class="recipe">{{this.recipe}}</h4>
-    <a href="/home/{{this._id}}" class="btn btn-info">View</a>
+    <a href="/home/{{this._id}}" class="submit_button">View & add comment</a>
    </div>
    
 </div>
