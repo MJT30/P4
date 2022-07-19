@@ -8,6 +8,7 @@
     {{!-- <link rel="stylesheet"  type="text/css" href="style.css"/> --}}
     <title>Ani-Food</title>
 </head>
+<header><h1> <p class="ani_food">Ani-Food</p></h1>
 <body>
    <div class="content">
     {{!-- {{#each data}} --}}
@@ -18,6 +19,26 @@
     <img alt="..." class="image" src="{{data.anime_image}}" />  <img alt="..." class="image" src="{{data.rl_image}}" /> 
     <br/>
     <h4 class="recipe">{{data.recipe}}</h4>
+    <br>
+
+    <form action="/home/:id/" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" class="input_form"/>
+
+            <label for="comment">Comment:</label>
+            <input id="comment" type="text" name="comment" class="input_form"/>
+        </div>
+        <input type="submit" class="submit_button"/>
+    </form>
+
+    <p>
+        {{!-- {{data.name}} --}}
+        {{data.comment}}
+    </p>
+  
+
+
    </div>
    
 </div>

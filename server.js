@@ -2,14 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
 const path = require("path");
-
-// const mid = require("./middleware/mid");
-// const sizeLimit = require("./middleware/sizeLimit");
-// const extentionLimit = require("./middleware/extentionLimit");
-
 const aniFoodSeed = require("./db/seed.json");
 require("hbs");
 const AniFood = require("./models/seed");
+const Comment = require("./models/seedComments");
 const methodOverride = require("method-override");
 const app = express();
 app.use(express.static("public"));
@@ -48,6 +44,12 @@ app.post("/home", (req, res) => {
   AniFood.create(req.body);
   res.redirect("/home");
   console.log("Adding new recipe");
+});
+
+app.post("/home/:id/", (req, res) => {
+  Comment.create(req.body.id);
+  res.redirect("/home");
+  console.log("Comment added");
 });
 
 const port = process.env.PORT || 4000;

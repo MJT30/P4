@@ -4,36 +4,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet"  type="text/css" href="style.css"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Monoton&family=Orbitron&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
     <title>Ani-Food</title>
 </head>
-<header><h1> <p class="ani_food">Ani-Food[WIP]</p></h1>
-{{!-- <input type="text" id="search" onkeyup="sendData(this)"/>
-<section id="results"></section>
+<header><h1> <p class="ani_food">Ani-Food</p></h1>
 
-<script>
- function sendData(e){
-    fetch('http://localhost:4000/home', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({payload: e.value})
-    }).then(res => res.json()).then(data => {ß
-        let payload = data.payload;
-        console.log(payload)
-    })
- }
-
-</script> --}}
 </header>
 <a href="/newrecipe" class="submit_button">New Recipe</a>
 
 <div class="content">
     {{#each data}}
     <h1 class="title">{{this.anime}}</h1>
-    <h3 class="dish">{{this.dish}}</h3>
-   <div>
+    <h2 class="dish">{{this.dish}}</h2>
+   <div class="content">
     <img alt="..." class="image" src="{{this.anime_image}}" />  <img alt="..." class="image" src="{{this.rl_image}}" /> 
     <br/>
-    <h4 class="recipe">{{this.recipe}}</h4>
+   <p><h4 class="recipe">{{this.recipe}}</h4></p> 
     <a href="/home/{{this._id}}" class="submit_button">View & add comment</a>
    </div>
    
