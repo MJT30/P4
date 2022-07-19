@@ -1,5 +1,6 @@
 import React from "react";
-
+import NewPost from "./components/NewPost";
+import { Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 // import Fetch from "./components/Fetch";
 import Header from "./components/Header";
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <br/>
+      <br />
       <Content />
     </div>
   );
