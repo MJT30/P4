@@ -31,8 +31,11 @@ app.get("/newrecipe", (req, res) => {
 app.get("/home/:id/", (req, res) => {
   AniFood.findById(req.params.id)
     .then((data) => {
-      console.log(data);
-      res.render("anifood/viewrecipe", { data });
+      Comment.find({}).then((comments) => {
+        console.log(data);
+        console.log(comments);
+        res.render("anifood/viewrecipe", { data, comments });
+      });
     })
     .catch(console.error);
   console.log("I'm working");

@@ -1,5 +1,5 @@
 html{
-    background-color: var( --clr-bg);
+    background-color: black;
     max-width: auto;
     max-height: auto;
 }
@@ -74,7 +74,23 @@ button:active {
     --clr-bg: hsl(323 21% 16%);
 }
 
+
+
+.about{
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Monoton', Orbitron;
+    text-transform: uppercase;
+    text-align: right;
+    top: -100px;
+    position: relative; 
+}
+
 .ani_food{
+   
     font-size: 44px;
     display: flex;
     flex-direction: column;
@@ -82,12 +98,12 @@ button:active {
     background-color: transparent;
     max-width: 50%;
     max-height: 50%;
-    margin-left: 350px;
-    font-family: 'Monoton', cursive;
+    /* margin-left: 350px; */
+    font-family: 'Monoton', Orbitron;
     text-shadow: 3px 3px 0 var(--clr-bg), 6px 6px 0 var(--clr-neon),
     9px 9px var(--clr-neon), 12px 12px 0 var(--clr-neon);
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     color: var(--clr-neon);
     animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
     letter-spacing: 0.4rem;
@@ -159,9 +175,9 @@ button:active {
 }
 
 
-div{
-    border-style: solid;
-}
+/* div{
+    border-style: dotted;
+} */
 
 .dish{
     text-align: center;
@@ -185,9 +201,11 @@ div{
 }
 
 .content{
-    color: var(--clr-neon);
-    /* border-radius: 8px; */
+    color: wheat;
     padding: auto;
+    background-color: #5b5a5a70;
+    margin-right: 75px;
+    margin-left: 75px;
 }
 
 .post_form{
@@ -234,3 +252,4 @@ background-image: linear-gradient(
     background-position: 200% center;
     }
 }
+
