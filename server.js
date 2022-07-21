@@ -55,6 +55,10 @@ app.post("/home/:id/", (req, res) => {
   console.log("Comment added");
 });
 
+app.get("/about", (req, res) => {
+  res.render("anifood/about");
+});
+
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
