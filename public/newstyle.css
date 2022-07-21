@@ -2,11 +2,7 @@ html{
     background-color: black;
     max-width: auto;
     max-height: auto;
-    background: url("3089751.jpeg");
-    background-size: contain;
-
-   
-
+    background: url("https://64.media.tumblr.com/e1e5009cd23251038b1dc04b9121c0d7/cc7f6cb47a441b20-c5/s1280x1920/e41d9187b5ddaf16b48bc611383ee9b5e52a88b3.gifv");
 }
 
 
@@ -59,7 +55,7 @@ button:active {
     max-height: 50%;
     margin-left: 350px;
     font-family: 'Orbitron', sans-serif;
-    color: white;
+    color: black;
     
 }
 
@@ -189,7 +185,7 @@ button:active {
     max-width: 50%;
     max-height: 50%;
     margin-left: 350px;
-    color: white;
+    color: black;
     font-family: 'Orbitron', sans-serif;
 }
 .recipe{
@@ -197,7 +193,7 @@ button:active {
     max-width: 50%;
     max-height: 50%;
     margin-left: 350; 
-    color: white;
+    color: black;
     font-family: 'Orbitron', sans-serif;
 }
 
@@ -260,7 +256,7 @@ background-image: linear-gradient(
 
 
 label{
-    color: white;
+    color: black;
 }
 
 

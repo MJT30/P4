@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html 
+   lang="en">
+<head>
+    <style>
+        html {background-image: url("https://images.alphacoders.com/690/690709.jpg");}
+    </style>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {{!-- <link rel="stylesheet"  href="style.css"/> --}}
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Monoton&family=Orbitron&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <a href="/home"><h1> <p style=" font-size: 44px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: transparent;
+    max-width: 50%;
+    max-height: 50%;
+    /* margin-left: 350px; */
+    font-family: 'Monoton', Orbitron;
+    text-shadow: 3px 3px 0 var(--clr-bg), 6px 6px 0 var(--clr-neon),
+    9px 9px var(--clr-neon), 12px 12px 0 var(--clr-neon);
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--clr-neon);
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;" class="ani_food">Ani-Food</p></h1></a>
+</header>
+
+
+   <div style="  color: wheat;
+    padding: auto;
+    background-color: #5b5a5a70;
+    margin-right: 75px;
+    margin-left: 75px;"; class="content">
+    {{!-- {{#each data}} --}}
+    
+    <h1 style="border-style: solid; text-align: center; max-width: 50%;
+    max-height: 50%;
+    margin-left: 350px;
+    font-family: 'Orbitron', sans-serif;
+    color: black;" class="title">{{data.anime}}</h1>
+    <h3 style="  text-align: center;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 350px;
+    color: black;
+    font-family: 'Orbitron', sans-serif;" class="dish">{{data.dish}}</h3>
+   <div>
+    <img style=" display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: auto;
+    max-height: auto;" alt="" class="image" src="{{data.anime_image}}" />  <img style="
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: auto;
+    max-height: auto;" alt="" class="image" src="{{data.rl_image}}" /> 
+    <br/>
+    <h4 style=" text-align: center;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 350; 
+    color: black;
+    font-family: 'Orbitron', sans-serif;" class="recipe">{{data.recipe}}</h4>
+    <br>
+
+  
+
+
+   </div>
+   
+</div>
+</a>
+<br>
+<h1 style="text-align: ;center">Add Comment</h1>
+<div style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;" class="post_form">
+ <form action="/home/:id/" method="POST">
+        <div style="border: ;solid">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" class="input_form"/>
+
+            <label for="comment">Comment:</label>
+            <input id="comment" type="text" name="comment" class="input_form"/>
+        </div>
+        <input type="submit" class="submit_button"/>
+    </form>
+
+</div>
+   
+<div style="border: solid; color: white;">
+    <p>
+        {{#each comments}}
+       <h2>👤: {{this.name}}</h2> 
+        
+           <h3 style="padding-left: ;12px; color: white">{{this.comment}}</h3> 
+        <br>
+        
+        {{/each}}
+</div>
+    
+
+    </p>
+{{!-- {{/each}} --}}
+</body>
+</html>

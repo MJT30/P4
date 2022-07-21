@@ -2,30 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- <link rel="stylesheet"  type="text/css" href="style.css"/> --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="stylesheet"  type="text/css" href="style.css"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Monoton&family=Orbitron&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-
-    <title>Ani-Food</title>
 </head>
+
+<body>
 <header>
     <a href="/home"><h1> <p class="ani_food">Ani-Food</p></h1></a>
 </header>
-<body>
+
+
    <div class="content">
     {{!-- {{#each data}} --}}
     
-    <h1 class="title">{{data.anime}}</h1>
+    <h1 style="color: orange" class="title">{{data.anime}}</h1>
     <h3 class="dish">{{data.dish}}</h3>
    <div>
-    <img alt="..." class="image" src="{{data.anime_image}}" />  <img alt="..." class="image" src="{{data.rl_image}}" /> 
+    <img alt="" class="image" src="{{data.anime_image}}" />  <img alt="" class="image" src="{{data.rl_image}}" /> 
     <br/>
     <h4 class="recipe">{{data.recipe}}</h4>
     <br>

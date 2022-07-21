@@ -34,7 +34,7 @@ app.get("/home/:id/", (req, res) => {
       Comment.find({}).then((comments) => {
         console.log(data);
         console.log(comments);
-        res.render("anifood/viewrecipe", { data, comments });
+        res.render("anifood/recipe", { data, comments });
       });
     })
     .catch(console.error);
