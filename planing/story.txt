@@ -1,0 +1,6 @@
+This one was quite difficult. Having to restart devlopment about 4 times due to frontend / backend issues. First starting out with the MERN Stack, then switching to React & Django. Then back to MERN, and then to HBS to render on the front end. Then back to React & then finally back to HBS. 
+
+
+I wanted the page to be minimilist and reminissant of early 2000's message boards.
+
+Thank you to Martin & Cicelia for the idea.
