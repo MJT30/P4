@@ -27,3 +27,7 @@ It is also intented for users to share recipies and diccuss them.
 
 <h1>Add Page<h1>
 <img width="1440" alt="Screen Shot 2022-07-23 at 12 03 55 AM" src="https://user-images.githubusercontent.com/96808978/180594502-7b10f2ba-f49b-4d3a-9b07-8f294c2f3e88.png">
+
+  
+  <h1>Unsolved Isues</h1>
+    I Had a file upload feature working. It would post to by data base but the images would not render on screen due to the Schema type. When the app moves into React on the frontend, this technology will be fully implemented. 
