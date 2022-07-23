@@ -94,6 +94,9 @@ button:active {
     position: relative; 
 }
 
+
+
+
 .ani_food{
    
     font-size: 44px;
@@ -115,7 +118,7 @@ button:active {
 }
 
 
-@keyframes shadows {
+/* @keyframes shadows {
     0% {
         text-shadow: none;
     }
@@ -177,7 +180,7 @@ button:active {
     100% {
         transform: translate(0px, 0px);
     }
-}
+} */
 
 
 /* div{
@@ -252,11 +255,11 @@ background-image: linear-gradient(
 }
 
 
-@keyframes textclip {
+/* @keyframes textclip {
     to {
     background-position: 200% center;
     }
-}
+} */
 
 
 label{
